@@ -20,6 +20,11 @@
                     							</td>
                     						</tr>
                     					</c:forEach>
+Total views 1: ${cookie['views']}
+Total views 2: ${cookie['views'].getValue()}
+Total views 3: ${cookie.views}
+Total views 4: ${cookie.views.getValue()}
+
 <form action="index.jsp" method="GET">
 <input type="submit" class="button" value="RETURN"/>
 </form>
