@@ -8,8 +8,5 @@ import java.util.Map;
  */
 public class RequestsService
 {
-	public static List<String> getRequests;
-	public static Map<String, String> postRequests;
-	public static List<String> putRequests;
-	public static List<String> deleteRequests;
+	public static Map<String, String> requests;
 }

@@ -1,32 +1,15 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!doctype html>
 <html>
-<head>
-   <title> GET Page</title>
-    <link rel="stylesheet" href="css/custom.css">
-
-</head>
-<body>
-<h3 align="center">This is response to GET request</h3>
-                    							<h2></h2>Total requests count: ${requestCount}
-                    						</h2>
-                    						<br>
-                    						</h2>All requests:</h2>
-                    							<br>
-                    					<c:forEach items="${requests}" var="request">
-                    						<tr>
-                    							<td>
-                    								<c:out value="${request}"/>
-                    							</td>
-                    						</tr>
-                    					</c:forEach>
-Total views 1: ${cookie['views']}
-Total views 2: ${cookie['views'].getValue()}
-Total views 3: ${cookie.views}
-Total views 4: ${cookie.views.getValue()}
-
-<form action="index.jsp" method="GET">
-<input type="submit" class="button" value="RETURN"/>
-</form>
-</body>
+	<head>
+		<title>GET Page</title>
+		<link rel="stylesheet" href="css/custom.css"/>
+	</head>
+	<body>
+		<h3 align="center">This is response to GET request</h3>
+		<br/>
+		<form action="index.jsp" method="GET">
+			<input type="submit" class="button" value="RETURN"/>
+		</form>
+	</body>
 </html>

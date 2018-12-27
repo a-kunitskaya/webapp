@@ -2,12 +2,21 @@
 <!doctype html>
 <html>
 	<head>
-		<title>POST Page</title>
+		<title>PUT Page</title>
 		<link rel="stylesheet" href="css/custom.css">
 		</head>
 		<body>
-			<h2 align="center">This is response to POST request</h2>
-			<h4>Key:value from request: ${key}:${value}</h4>
+			<h2 align="center">This is response to PUT request</h2>
+			<br/>
+			<c:choose>
+				<c:when test="${empty exception}">
+					<h4>Updated value '${value}' for key '${key}'</h4>
+				</c:when>
+				<c:otherwise>
+					<h4>${exception}</h4>
+				</c:otherwise>
+			</c:choose>
+			<br/>
 		</h2>All POST requests (inner state, task 1):
 	</h2>
 	<c:forEach var="request" items="${requests}">

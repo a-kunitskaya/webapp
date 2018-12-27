@@ -7,37 +7,34 @@
 		<link rel="stylesheet" href="css/custom.css"/>
 	</head>
 	<body>
-		<h2 align="center">Click a button below to submit request</h2>
-
-        <%-- GET method --%>
+		<h2 align="center">Click a button below to submit request</h2><%-- GET method --%>
 		<form action="servlet" method="GET">
 			<input type="submit" class="button" value="GET"/>
 		</form>
-
-        <%-- POST method --%>
 		<form action="servlet" method="POST">
 			<br/>
-			<input type="text" placeholder="Enter key to POST" class="form" name="key"/>
+			<input type="text" placeholder="Enter a key to POST" class="form" name="key"/>
 			<br/>
-			<input type="text" placeholder="Enter value to POST" class="form" name="value"/>
+			<input type="text" placeholder="Enter a value to POST" class="form" name="value"/>
 			<br/>
 			<input type="submit" class="button" value="POST"/>
 		</form>
+		<br/>
+		<form action="servlet" method="PUT">
 			<br/>
-
-			     <%-- PUT method --%>
-				<form action="servlet" method="PUT">
-        			<br/>
-        			<input type="text" placeholder="Enter value to update PUT" class="form" name="value"/>
-        			<br/>
-        			<input type="submit" class="button" value="POST"/>
-        		</form>
-					<br/>
-		<button class="button">PUT</button>
-		<button class="button">DELETE</button>
-
-		<h2>Total views count:</h2>
-		<%= com.kunitskaya.service.ViewCounter.getViewsCount()%>
-
+			<input type="text" placeholder="Enter a key to UPDATE the value for" class="form" name="key"/>
+			<br/>
+			<input type="text" placeholder="Enter a new value" class="form" name="value"/>
+			<br/>
+			<input type="submit" class="button" value="PUT"/>
+		</form>
+		<br/>
+		<form action="servlet" method="DELETE">
+			<br/>
+			<input type="text" placeholder="Enter a key to DELETE" class="form" name="key"/>
+			<br/>
+			<input type="submit" class="button" value="DELETE"/>
+		</form>
+		<h2>Total views count:</h2><%= com.kunitskaya.service.ViewCounter.getViewsCount()%>
 	</body>
 </html>
