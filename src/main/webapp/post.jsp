@@ -7,7 +7,7 @@
 		</head>
 		<body>
 			<h2 align="center">This is response to POST request</h2>
-			<h4>Key:value from request: ${key}:${value}</h4>
+			</h4>Key, value from request: ${key}:${value}</h4>
 		</h2>All POST requests (inner state, task 1):
 	</h2>
 	<c:forEach var="request" items="${requests}">
