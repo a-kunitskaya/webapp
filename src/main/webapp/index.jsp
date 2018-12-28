@@ -9,9 +9,10 @@
 	<body>
 		<h2 align="center">Click a button below to submit request</h2>
 		<form action="servlet" method="GET">
+		<input type="hidden" name="command" value="get"/>
 			<input type="submit" class="button" value="GET"/>
 		</form>
-		<form action="servlet" method="POST">
+		<form action="servlet?command=post" method="POST">
 			<br/>
 			<input type="text" placeholder="Enter a key to POST" class="form" name="key"/>
 			<br/>
@@ -29,7 +30,7 @@
 			<input type="submit" class="button" value="PUT"/>
 		</form>
 		<br/>
-		<form action="servlet" method="DELETE">
+		<form action="servlet?command=delete" method="POST">
 			<br/>
 			<input type="text" placeholder="Enter a key to DELETE" class="form" name="key"/>
 			<br/>

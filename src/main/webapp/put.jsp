@@ -10,10 +10,10 @@
 			<br/>
 			<c:choose>
 				<c:when test="${empty exception}">
-					<h4>Updated value '${value}' for key '${key}'</h4>
+				<h4>${exception}</h4>
 				</c:when>
 				<c:otherwise>
-					<h4>${exception}</h4>
+					<h4>Updated value '${value}' for key '${key}'</h4>
 				</c:otherwise>
 			</c:choose>
 			<br/>

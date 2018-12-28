@@ -7,31 +7,23 @@ import java.io.IOException;
 
 import static com.kunitskaya.service.RequestsService.requests;
 
-public class Put extends BasePage {
+public class Post extends BasePage {
 
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         String key = req.getParameter("key");
         String value = req.getParameter("value");
 
-        logger.info(String.format(message, "PUT", key, value));
+        logger.info(String.format(message, "POST", key, value));
 
         req.setAttribute("key", key);
         req.setAttribute("value", value);
+
+        requests.put(key, value);
+
         req.setAttribute("requests", requests);
 
-        if (requests.containsKey(key)) {
-
-            //update value for existing key
-            requests.put(key, value);
-
-            //set updated requests
-            req.setAttribute("requests", requests);
-
-        } else {
-            req.setAttribute("exception", String.format(exception, key));
-        }
-
-        req.getRequestDispatcher("put.jsp").forward(req, resp);
+        req.getRequestDispatcher("post.jsp").forward(req, resp);
     }
 }

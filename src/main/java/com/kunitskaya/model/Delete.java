@@ -1,29 +1,31 @@
 package com.kunitskaya.model;
 
+import com.kunitskaya.service.ViewCounter;
+import org.apache.commons.lang3.StringUtils;
+
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 import static com.kunitskaya.service.RequestsService.requests;
 
-public class Put extends BasePage {
+public class Delete extends BasePage {
 
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String key = req.getParameter("key");
-        String value = req.getParameter("value");
+        Cookie cookie = new Cookie("views", String.valueOf(ViewCounter.getViewsCount()));
+        resp.addCookie(cookie);
 
-        logger.info(String.format(message, "PUT", key, value));
-
-        req.setAttribute("key", key);
-        req.setAttribute("value", value);
         req.setAttribute("requests", requests);
 
-        if (requests.containsKey(key)) {
+        String key = req.getParameter("key");
 
-            //update value for existing key
-            requests.put(key, value);
+        logger.info(String.format(message, "PUT", key, StringUtils.EMPTY));
+
+        if (requests.containsKey(key)) {
+            requests.remove(key);
 
             //set updated requests
             req.setAttribute("requests", requests);
@@ -31,7 +33,6 @@ public class Put extends BasePage {
         } else {
             req.setAttribute("exception", String.format(exception, key));
         }
-
-        req.getRequestDispatcher("put.jsp").forward(req, resp);
+        req.getRequestDispatcher("delete.jsp").forward(req, resp);
     }
 }
