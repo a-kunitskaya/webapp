@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="css/custom.css"/>
 	</head>
 	<body>
-		<h2 align="center">Click a button below to submit request</h2>
+		<h2 align="center">Click a button below to submit request</h2><%-- GET method --%>
 		<form action="servlet" method="GET">
 			<input type="submit" class="button" value="GET"/>
 		</form>
@@ -20,7 +20,7 @@
 			<input type="submit" class="button" value="POST"/>
 		</form>
 		<br/>
-		<form action="servlet?command=put" method="POST">
+		<form action="servlet" method="PUT">
 			<br/>
 			<input type="text" placeholder="Enter a key to UPDATE the value for" class="form" name="key"/>
 			<br/>
@@ -35,8 +35,6 @@
 			<br/>
 			<input type="submit" class="button" value="DELETE"/>
 		</form>
-		<h4>Total views count:
-		<%= com.kunitskaya.service.ViewCounter.getViewsCount()%>
-		</h2>
+		<h2>Total views count:</h2><%= com.kunitskaya.service.ViewCounter.getViewsCount()%>
 	</body>
 </html>

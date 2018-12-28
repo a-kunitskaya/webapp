@@ -64,7 +64,6 @@ public class Controller extends HttpServlet {
         } else {
             req.setAttribute("exception", String.format(exception, key));
         }
-
         req.getRequestDispatcher("put.jsp").forward(req, resp);
     }
 
