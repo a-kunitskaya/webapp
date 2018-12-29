@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class Controller extends HttpServlet {
+
     PageFactory pageFactory = PageFactory.getInstance();
 
     @Override

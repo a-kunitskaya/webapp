@@ -1,4 +1,6 @@
-<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!doctype html>
 <html>
 	<head>
@@ -6,16 +8,21 @@
 		<link rel="stylesheet" href="css/custom.css">
 		</head>
 		<body>
-			<h2 align="center">This is response to POST request</h2>
-			</h4>Key, value from request: ${key}:${value}</h4>
-		</h2>All POST requests (inner state, task 1):
-	</h2>
-	<c:forEach var="request" items="${requests}">
-		<tr>
-			<td>${request.key}:${request.value}: </td>
-		</tr>
-	</c:forEach>
-	<form action="index.jsp" method="GET">
+			</div>
+			<h1>This is response to POST request</h1>
+			<p>Key, value from the current request: ${key}:${value}</p>
+
+		<div>
+		</p>All POST requests (inner state, task 1):
+	</p>
+    		<c:forEach var="request" items="${requests}">
+    			<p>${request.key}:${request.value}<p>
+    		</c:forEach>
+
+	<form action="servlet" method="GET">
+					<input type="hidden" name="command" value="get"/>
+    				<input type="hidden" name="isIndex" value="true"/>
 		<input type="submit" class="button" value="RETURN"/>
 	</body>
+	</div>
 </html>

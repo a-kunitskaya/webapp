@@ -15,8 +15,6 @@ public class Delete extends BasePage {
 
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Cookie cookie = new Cookie("views", String.valueOf(ViewCounter.getViewsCount()));
-        resp.addCookie(cookie);
 
         req.setAttribute("requests", requests);
 

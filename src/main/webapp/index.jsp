@@ -1,5 +1,9 @@
-<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!doctype html>
+
 <html>
 	<head>
 		<meta charset="UTF-8"/>
@@ -7,11 +11,18 @@
 		<link rel="stylesheet" href="css/custom.css"/>
 	</head>
 	<body>
-		<h2 align="center">Click a button below to submit request</h2>
+			<div>
+    		<h1>Welcome!</h1>
+    		<p>Click a button below to submit request.</p>
+    		</div>
+
+<div>
 		<form action="servlet" method="GET">
 		<input type="hidden" name="command" value="get"/>
-			<input type="submit" class="button" value="GET"/>
+		<input type="hidden" name="isIndex" value="false"/>
+		<input type="submit" class="button" value="GET"/>
 		</form>
+
 		<form action="servlet?command=post" method="POST">
 			<br/>
 			<input type="text" placeholder="Enter a key to POST" class="form" name="key"/>
@@ -36,8 +47,7 @@
 			<br/>
 			<input type="submit" class="button" value="DELETE"/>
 		</form>
-		<h4>Total views count:
-		<%= com.kunitskaya.service.ViewCounter.getViewsCount()%>
-		</h2>
+		<p>Total views count from cookies: ${views}</p>
+		</div>
 	</body>
 </html>

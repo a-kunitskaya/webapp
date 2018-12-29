@@ -12,6 +12,15 @@ public class Get extends BasePage {
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info(message);
 
-        req.getRequestDispatcher("get.jsp").forward(req, resp);
+        String isIndex = req.getParameter("isIndex");
+
+        if (Boolean.parseBoolean(isIndex)) {
+            addViewsCookie(req, resp);
+
+            req.getRequestDispatcher("index.jsp").forward(req, resp);
+
+        } else {
+            req.getRequestDispatcher("get.jsp").forward(req, resp);
+        }
     }
 }
