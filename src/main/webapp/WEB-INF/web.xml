@@ -14,8 +14,4 @@
         <url-pattern>/servlet</url-pattern>
     </servlet-mapping>
 
-    <context-param>
-        <param-name>views</param-name>
-        <param-value>0</param-value>
-    </context-param>
 </web-app>

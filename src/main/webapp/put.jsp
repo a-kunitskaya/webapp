@@ -5,32 +5,24 @@
 <html>
 	<head>
 		<title>PUT Page</title>
+		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/custom.css"/>
 	</head>
 	<body>
 		<div>
-			<div>
 		<h1>This is response to the current PUT request</h1>
 		<br/>
 		<c:choose>
 			<c:when test="${exception == null}">
-				<h4>Updated value '${value}' for key '${key}'</h4>
+				<p>Updated value '${value}' for key '${key}'</p>
 			</c:when>
 			<c:otherwise>
-				<h4>${exception}</h4>
+				<p>${exception}</p>
 			</c:otherwise>
 		</c:choose>
-		</div>
 		<br/>
-		<h4>All POST requests (inner state, task 1):</h4>
-		<c:forEach var="request" items="${requests}">
-			<p>${request.key}:${request.value}</p>
-		</c:forEach>
-		<form action="servlet" method="GET">
-						<input type="hidden" name="command" value="get"/>
-        				<input type="hidden" name="isIndex" value="true"/>
-			<input type="submit" class="button" value="RETURN"/>
-		</form>
+<jsp:include page="parts/all_requests.jsp"/>
+<jsp:include page="parts/return.jsp"/>
 			</div>
 	</body>
 </html>

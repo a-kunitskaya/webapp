@@ -8,12 +8,13 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<title>Home page</title>
+		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/custom.css"/>
 	</head>
 	<body>
 			<div>
-    		<h1>Welcome!</h1>
-    		<p>Click a button below to submit request.</p>
+    		<h1>Thank you for using the app!</h1>
+    		<p>Please click one of the buttons below to submit a request.</p>
     		</div>
 
 <div>

@@ -6,35 +6,24 @@
 <html>
 	<head>
 		<title>DELETE Page</title>
+		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/custom.css">
 		</head>
 		<body>
 			<div>
-				<div>
 			<h1>This is response to DELETE request</h1>
 			<br/>
             			<c:choose>
             				<c:when test="${empty exception}">
-            					<h4>Deleted object with key '${key}'</h4>
+            					<p>Deleted object with key '${key}'</p>
             				</c:when>
             				<c:otherwise>
-            					<h4>${exception}</h4>
+            					<p>${exception}</p>
             				</c:otherwise>
             			</c:choose>
             			<br/>
-            				<div/>
-            		</h2>All POST requests (inner state, task 1):
-            	</h2>
-            	<c:forEach var="request" items="${requests}">
-
-            			<p>${request.key}:${request.value}:</p>
-
-            	</c:forEach>
-		<form action="servlet" method="GET">
-				<input type="hidden" name="command" value="get"/>
-				<input type="hidden" name="isIndex" value="true"/>
-			<input type="submit" class="button" value="RETURN"/>
-		</form>
+<jsp:include page="parts/all_requests.jsp"/>
+<jsp:include page="parts/return.jsp"/>
 			</div>
 	</body>
 </html>

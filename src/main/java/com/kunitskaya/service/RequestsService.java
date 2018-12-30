@@ -6,5 +6,5 @@ import java.util.Map;
 
 public class RequestsService
 {
-	public static Map<String, String> requests = new HashMap<String, String>();
+	public static Map<String, String> requests = new HashMap<>();
 }
