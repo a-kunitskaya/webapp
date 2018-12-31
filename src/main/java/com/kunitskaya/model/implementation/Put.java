@@ -1,6 +1,6 @@
-package com.kunitskaya.model;
+package com.kunitskaya.model.implementation;
 
-import org.apache.commons.lang3.StringUtils;
+import com.kunitskaya.model.implementation.BasePage;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -9,20 +9,23 @@ import java.io.IOException;
 
 import static com.kunitskaya.service.RequestsService.requests;
 
-public class Delete extends BasePage {
+public class Put extends BasePage {
 
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String key = req.getParameter("key");
+        String value = req.getParameter("value");
 
+        logger.info(String.format(message, "PUT", key, value));
+
+        req.setAttribute("key", key);
+        req.setAttribute("value", value);
         req.setAttribute("requests", requests);
 
-        String key = req.getParameter("key");
-        req.setAttribute("key", key);
-
-        logger.info(String.format(message, "PUT", key, StringUtils.EMPTY));
-
         if (requests.containsKey(key)) {
-            requests.remove(key);
+
+            //update value for existing key
+            requests.put(key, value);
 
             //set updated requests
             req.setAttribute("requests", requests);
@@ -30,6 +33,7 @@ public class Delete extends BasePage {
         } else {
             req.setAttribute("exception", String.format(exception, key));
         }
-        req.getRequestDispatcher("delete.jsp").forward(req, resp);
+
+        req.getRequestDispatcher("put.jsp").forward(req, resp);
     }
 }

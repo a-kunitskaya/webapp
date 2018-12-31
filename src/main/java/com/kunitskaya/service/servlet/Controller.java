@@ -1,4 +1,6 @@
-package com.kunitskaya;
+package com.kunitskaya.service.servlet;
+
+import com.kunitskaya.model.Command;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

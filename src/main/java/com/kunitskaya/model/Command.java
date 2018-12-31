@@ -1,4 +1,4 @@
-package com.kunitskaya;
+package com.kunitskaya.model;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

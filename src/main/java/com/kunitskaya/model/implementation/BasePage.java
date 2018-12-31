@@ -1,6 +1,6 @@
-package com.kunitskaya.model;
+package com.kunitskaya.model.implementation;
 
-import com.kunitskaya.Command;
+import com.kunitskaya.model.Command;
 import com.kunitskaya.service.ViewCounter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

@@ -1,4 +1,6 @@
-package com.kunitskaya.model;
+package com.kunitskaya.model.implementation;
+
+import com.kunitskaya.model.implementation.BasePage;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

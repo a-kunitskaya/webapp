@@ -1,9 +1,10 @@
-package com.kunitskaya;
+package com.kunitskaya.service.servlet;
 
-import com.kunitskaya.model.Delete;
-import com.kunitskaya.model.Get;
-import com.kunitskaya.model.Post;
-import com.kunitskaya.model.Put;
+import com.kunitskaya.model.Command;
+import com.kunitskaya.model.implementation.Delete;
+import com.kunitskaya.model.implementation.Get;
+import com.kunitskaya.model.implementation.Post;
+import com.kunitskaya.model.implementation.Put;
 
 import java.util.HashMap;
 import java.util.Map;

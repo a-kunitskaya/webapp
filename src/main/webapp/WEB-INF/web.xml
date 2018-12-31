@@ -6,7 +6,7 @@
 
     <servlet>
         <servlet-name>Servlet</servlet-name>
-        <servlet-class>com.kunitskaya.Controller</servlet-class>
+        <servlet-class>com.kunitskaya.service.servlet.Controller</servlet-class>
     </servlet>
 
     <servlet-mapping>
