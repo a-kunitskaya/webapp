@@ -9,11 +9,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PageFactory {
-    public static PageFactory instance;
+    private static PageFactory instance;
     private Map<String, Command> pages;
 
     private PageFactory() {
-        pages = new HashMap<String, Command>();
+        pages = new HashMap<>();
 
         pages.put("get", new Get());
         pages.put("post", new Post());

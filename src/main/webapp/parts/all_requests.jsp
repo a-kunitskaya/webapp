@@ -15,4 +15,3 @@
   <td>${request.value}</td>
 </c:forEach>
 </table>
-<table>

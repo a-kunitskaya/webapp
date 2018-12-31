@@ -6,10 +6,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class Get extends BasePage {
-    private String message = "Received GET request";
 
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String message = "Received GET request";
         logger.info(message);
 
         String isIndex = req.getParameter("isIndex");

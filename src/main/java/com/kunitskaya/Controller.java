@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class Controller extends HttpServlet {
 
-    PageFactory pageFactory = PageFactory.getInstance();
+    private PageFactory pageFactory = PageFactory.getInstance();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
