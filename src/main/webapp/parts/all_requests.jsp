@@ -3,9 +3,16 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
-<div>
-</p>All POST requests (inner state, task 1):</p>
+<h2>Requests list:</h2>
+<table>
+  <tr>
+    <th>KEY</th>
+    <th>VALUE</th>
+  </tr>
 <c:forEach var="request" items="${requests}">
-<p>${request.key}:${request.value}:</p>
+  <tr>
+ <td>${request.key}</td>
+  <td>${request.value}</td>
 </c:forEach>
-</div>
+</table>
+<table>

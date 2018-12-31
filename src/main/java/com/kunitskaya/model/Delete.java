@@ -1,10 +1,8 @@
 package com.kunitskaya.model;
 
-import com.kunitskaya.service.ViewCounter;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -19,6 +17,7 @@ public class Delete extends BasePage {
         req.setAttribute("requests", requests);
 
         String key = req.getParameter("key");
+        req.setAttribute("key", key);
 
         logger.info(String.format(message, "PUT", key, StringUtils.EMPTY));
 

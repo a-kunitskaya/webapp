@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!doctype html>
 <html>
 	<head>
@@ -23,6 +21,7 @@
             			</c:choose>
             			<br/>
 <jsp:include page="parts/all_requests.jsp"/>
+<br/>
 <jsp:include page="parts/return.jsp"/>
 			</div>
 	</body>

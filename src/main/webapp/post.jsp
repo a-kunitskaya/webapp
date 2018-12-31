@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!doctype html>
 <html>
 	<head>
@@ -14,6 +13,7 @@
 			<p>Key, value from the current request: ${key}:${value}</p>
 
 <jsp:include page="parts/all_requests.jsp"/>
+<br/>
 <jsp:include page="parts/return.jsp"/>
 
 	</div>

@@ -7,3 +7,28 @@
       border-radius: 4px;
       box-sizing: border-box;
     }
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 70%;
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      color: black;
+      font-size: 25px;
+    }
