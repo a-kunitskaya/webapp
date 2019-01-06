@@ -5,13 +5,13 @@
 
 <h2>Requests list:</h2>
 <table>
-  <tr>
-    <th>KEY</th>
-    <th>VALUE</th>
-  </tr>
-<c:forEach var="request" items="${requests}">
-  <tr>
- <td>${request.key}</td>
-  <td>${request.value}</td>
-</c:forEach>
+    <tr>
+        <th>KEY</th>
+        <th>VALUE</th>
+    </tr>
+    <c:forEach var="request" items="${requests}">
+    <tr>
+        <td>${request.key}</td>
+        <td>${request.value}</td>
+        </c:forEach>
 </table>

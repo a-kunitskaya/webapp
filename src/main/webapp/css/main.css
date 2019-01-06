@@ -1,36 +1,36 @@
-    .button {
-      background-color: #646f99;
-      border: none;
-      color: white;
-      padding: 10px 26px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 30px;
-      margin: 2px 1px;
-      cursor: pointer;
-      width: 70%;
-      margin-left: 15%;
-      margin-right: 15%;
-    }
+.button {
+    background-color: #646f99;
+    border: none;
+    color: white;
+    padding: 10px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 2px 1px;
+    cursor: pointer;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
 
-    div {
-      border: 1px solid gray;
-      padding: 8px;
-      width: 70%;
-      margin:0 auto;
-    }
+div {
+    border: 1px solid gray;
+    padding: 8px;
+    width: 70%;
+    margin: 0 auto;
+}
 
-    h1 {
-      text-align: center;
-      text-transform: uppercase;
-      color: #646f99;
-      font-size: 30px;
-    }
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #646f99;
+    font-size: 30px;
+}
 
-    p {
-      text-indent: 50px;
-      text-align: justify;
-      letter-spacing: 3px;
-      font-size: 20px;
-    }
+p {
+    text-indent: 50px;
+    text-align: justify;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
